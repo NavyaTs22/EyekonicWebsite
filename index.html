@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EYEKONIC</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+<video src="KATSEYE.mp4" autoplay loop muted ></video> 
+<button id="mutetoggle">🕪</button>
+
+<header class="header">
+<a href="#"class="logo">EYEKONIC</a>
+
+<nav class="navbar">
+
+    
+    <div class="dropdown-trigger">
+        <a href="#">SHOP US</a> 
+        <div class="dropdown-menu">
+            <a href="shop.html">CATEGORIES</a>
+            <a href="https://www.gap.com/browse/new/fall-denim-shop?cid=3050126&mlink=3050124,1,Adult_DenimCampaign_Merch_LP_ShopCampaign_CTA">COLLECTIONS</a>
+        </div>
+    </div>
+    
+<a href="contact.html">CONTACT</a>
+<a href="login.html">⍛</a>
+<a href="wishlist.html">♡</a>
+</nav>
+</header>
+    
+    <div class="main-content-area">
+       <div class="campaign">
+       <a href="https://www.gap.com/browse/new/fall-denim-shop?cid=3050126&mlink=3050124,1,Adult_DenimCampaign_Merch_LP_ShopCampaign_CTA"> SHOP DENIM CAMPAIGN</a>
+       </div>
+         
+         
+    <div class="collection">
+        <div class="campaign-image">
+            <img src="katseyegap.jpeg" alt="Better in Denim Lookbook">
+        </div>
+        <div class="campaign-content">
+            <h1>Better in Denim.</h1>
+            <h2>The lookbook.</h2>
+            <p>A new denim collection for your self-expression. Bold fits. Low rises. Made to wear one way — yours.</p>
+            <p>Featured On Forbes For Recording Breaking Marketing Campaign</p>
+             <div class="gap">
+       <a href="https://www.forbes.com/sites/karineldor/2025/09/05/why-gaps-better-in-denim-ad-struck-the-right-chord/">READ ABOUT THE CAMPAIGN</a>
+       </div>
+       
+            </div>
+    </div>
+<div class="carousel">
+    <h1>OUR RECENT COLLECTIONS-DENIM CAMPAIGN FEATURING KATSEYE</h1>
+ <div class="gallery">
+  <div class="main-image">
+    <img id="displayImage" src="https://www.gap.com/webcontent/0060/803/833/cn60803833.jpg" alt="">
+  </div>
+
+  <div class="thumbnails">
+    <img class="thumb active" src="https://www.gap.com/webcontent/0060/803/833/cn60803833.jpg" onclick="changeImage(this)">
+    <img class="thumb" src="https://www.gap.com/webcontent/0060/803/763/cn60803763.jpg" onclick="changeImage(this)">
+    <img class="thumb" src="https://www.gap.com/webcontent/0060/803/805/cn60803805.jpg" onclick="changeImage(this)">
+    <img class="thumb" src="https://i.pinimg.com/736x/bd/fd/0f/bdfd0f03af86af368e6c694375f5eb0c.jpg" onclick="changeImage(this)">
+    <img class="thumb" src="https://i.pinimg.com/736x/35/60/5c/35605cae9205c62e2f682a1c9f3be616.jpg" onclick="changeImage(this)">
+    <img class="thumb" src="manon.jpeg" onclick="changeImage(this)">
+  </div>
+</div>
+
+</div>
+<script>
+function changeImage(thumb) {
+
+  document.getElementById("displayImage").src = thumb.src;
+
+
+  let allThumbs = document.querySelectorAll(".thumb");
+  allThumbs.forEach(t => t.classList.remove("active"));
+
+
+  thumb.classList.add("active");
+}
+</script>
+
+
+<div class="services">
+    <h1>FEATURED ON</h1>
+    <section class="collabs-section">
+  <div class="collabs-header">
+    <input id="collabs-search" class="collabs-search" type="search" placeholder="Search titles…">
+  </div>
+
+  <ul class="collabs-list">
+    <li class="collabs-item" data-title="Fashion industry news roundup">
+      <a href="https://www.glamour.com/story/the-katseye-x-gap-denim-ad-is-already-making-history">KATSEYE x GAP Denim Ad is Already Making History by being Most Watched Ad</a>
+      <div class="collabs-meta">“Can’t stop consuming the katseye gap commercial.”</div>
+    </li>
+
+    <li class="collabs-item" data-title="Designer collabs 2025">
+      <a href="https://www.emarketer.com/content/gap-viral-denim-ad-one-of-most-successful-campaigns-of-all-time">Gap’s viral denim ad was one of its most successful campaigns of all time</a>
+      <div class="collabs-meta">The one you would never wann miss.</div>
+    </li>
+    <li class="collabs-item" data-title="Designer collabs 2025">
+      <a href="https://thenodmag.com/content/katseye-girl-group-gap-denim-fashion-collaboration">KATSEYE x Gap is a Y2K fever dream</a>
+      <div class="collabs-meta">Like it or not, low-rise is back</div>
+    </li>
+     <li class="collabs-item" data-title="Designer collabs 2025">
+      <a href="https://www.dojeonmedia.com/post/katseye-x-gap-how-this-denim-campaign-broke-records-with-20m-views-in-3-days">KATSEYE X GAP: How This Denim Campaign Broke Records With 20M Views in 3 Days</a>
+      <div class="collabs-meta">And now with a blowing 60+ MILLION views in less than a month.</div>
+    </li>
+  </ul>
+</section>
+<script>(function () {
+  const search = document.getElementById('collabs-search');
+  const items = Array.from(document.querySelectorAll('.collabs-item'));
+
+  function filterList(term) {
+    const q = term.trim().toLowerCase();
+    items.forEach(item => {
+      const title = (item.dataset.title || '').toLowerCase();
+      item.style.display = !q || title.includes(q) ? '' : 'none';
+    });
+  }
+
+  if (search) {
+    search.addEventListener('input', (e) => filterList(e.target.value));
+  }
+})();</script>
+</div>
+
+<footer>
+<header style=" font-size:xx-large; font-family: 'Segoe UI';text-align: center; padding: 10px; color: #9681cf"> 🏎✨SOCIAL MEDIA✨🏎
+</header>
+
+<div style=" text-align: center;">
+
+<a href="https://www.instagram.com/laurenasherauthor/" target="_blank">
+  <img src="download (26).jpeg" alt="clickable book" height="40">
+  </a>
+  <a href="https://www.facebook.com/laurenasherauthor" target="_blank">
+  <img src="Facebook - purple app icon.jpeg" alt="clickable book" height="40">
+  </a>
+  <a href="https://x.com/LAsherAuthor" target="_blank">
+  <img src="Purple X Icon.jpeg" alt="clickable book" height="40">
+  </a>
+  <a href="https://in.pinterest.com/laurenasherauthor/" target="_blank">
+  <img src="Pinterest - purple app icon.jpeg" alt="clickable book" height="40">
+  
+  </a>
+  <a href="https://open.spotify.com/user/eohzwhrnpqj5eke2ud3normgx?si=fe47312f67df4602" target="_blank">
+  <img src="Spotify - purple app Icon.jpeg" alt="clickable book" height="40">
+  </a>
+
+</div>
+
+
+<!-- Footer -->
+ <p style="text-align:center; color:#9681cf";>____________________________________________</p>
+
+  <p style="text-align:center; margin-bottom:40px; font-size:14px; color:#9681cf;">
+   DO follow to be part of revolutions. 
+  </p
+
+</footer>
+  </div>
+</body>
+</html>
